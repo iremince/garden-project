@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width = device-width, inital-scale = 1"/>
+    <title>Work Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="flower-popup">
+        <div class="popup-title">Plant a New Flower</div>
+
+        <div class="popup-section popup-section-horizontal">
+            <div class = "activity-section">
+                <label class = "popup-label" > What progress did you make? </label>
+                <input type = "text" id = "activity-input" placeholder="e.g.,Language learning" />
+            </div>
+            <div class="time-tab-section">
+                <label class="popup-label">Duration</label>
+                <div class="time-selector">
+                    <div class="time-display">
+                        <span id="time-display-text">30 min</span>
+                        <span class="time-display-arrow">▼</span>
+                    </div>
+                    <div class="time-dropdown" style="display: none;">
+                        <div class="time-dropdown-option" data-minutes="30">30 min</div>
+                        <div class="time-dropdown-option" data-minutes="60">1 hour</div>
+                        <div class="time-dropdown-option" data-minutes="120">2 hours</div>
+                        <div class="time-dropdown-option" data-minutes="0">Custom...</div>
+                        <div id="custom-time-inputs" style="display: none; padding: 10px;">
+                            <input type="number" id="custom-hours" placeholder="H" min="0">
+                            <input type="number" id="custom-minutes" placeholder="M" min="0" max="59">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-section">
+            <label class="popup-label">Which flower do you want to plant?</label>
+            <div class="flower-selection">
+                <div class="flower-option selected" data-flower="flower1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#FF69B4" class="bi bi-flower2 flower-icon" viewBox="0 0 16 16"> <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4m3-12q0 .11-.03.247c-.544.241-1.091.638-1.598 1.084A3 3 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1 1 0 0 1 5 4a3 3 0 0 1 6 0m-.812 6.052A3 3 0 0 0 11 8a3 3 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a7 7 0 0 1-.647-.487m-3.56.617a3 3 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084q.03.137.03.247a3 3 0 1 1-6 0q0-.11.03-.247c.544-.242 1.091-.638 1.598-1.084m-.816-4.721A3 3 0 0 0 5 8c0 .794.308 1.516.812 2.052a7 7 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487M8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/> </svg>
+                    <span>Daisy</span>
+                </div>
+                <div class="flower-option" data-flower="flower2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#888" class="bi bi-flower2 flower-icon" viewBox="0 0 16 16"> <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4m3-12q0 .11-.03.247c-.544.241-1.091.638-1.598 1.084A3 3 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1 1 0 0 1 5 4a3 3 0 0 1 6 0m-.812 6.052A3 3 0 0 0 11 8a3 3 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a7 7 0 0 1-.647-.487m-3.56.617a3 3 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084q.03.137.03.247a3 3 0 1 1-6 0q0-.11.03-.247c.544-.242 1.091-.638 1.598-1.084m-.816-4.721A3 3 0 0 0 5 8c0 .794.308 1.516.812 2.052a7 7 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487M8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/> </svg>
+                    <span>Tulip</span>
+                </div>
+                <div class="flower-option" data-flower="flower3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#2196F3" class="bi bi-flower2 flower-icon" viewBox="0 0 16 16"> <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4m3-12q0 .11-.03.247c-.544.241-1.091.638-1.598 1.084A3 3 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1 1 0 0 1 5 4a3 3 0 0 1 6 0m-.812 6.052A3 3 0 0 0 11 8a3 3 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a7 7 0 0 1-.647-.487m-3.56.617a3 3 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084q.03.137.03.247a3 3 0 1 1-6 0q0-.11.03-.247c.544-.242 1.091-.638 1.598-1.084m-.816-4.721A3 3 0 0 0 5 8c0 .794.308 1.516.812 2.052a7 7 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487M8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/> </svg>
+                    <span>Bluebell</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-buttons">
+            <button class="popup-btn btn-cancel">Cancel</button>
+            <button class="popup-btn btn-confirm">Plant it</button>
+        </div>
+    </div>
+
+    <!-- Flower Detail Popup -->
+    <div id="flower-detail-popup" class="hidden">
+        <div class="detail-title">Session Details</div>
+        <div class="detail-content">
+            <p><strong>Activity:</strong> <span id="detail-activity"></span></p>
+            <p><strong>Duration:</strong> <span id="detail-duration"></span> minutes</p>
+            <p><strong>Date:</strong> <span id="detail-date"></span></p>
+        </div>
+        <button id="detail-close-btn" class="popup-btn">Close</button>
+    </div>
+
+    <div class="stats-overlay">
+        <h4 id="stats-header"><span id="stats-arrow" style="margin-right: 8px;">></span>Statistics</h4>
+        <div id="stats-body" class="hidden">
+            <div id="stats-tabs">
+                <button class="stats-tab-btn active" data-period="today">Today</button>
+                <button class="stats-tab-btn" data-period="weekly">This Week</button>
+                <button class="stats-tab-btn" data-period="monthly">This Month</button>
+            </div>
+            <div id="stats-content">
+                <div class="stat-row">
+                    <span>Time:</span>
+                    <span class="stat-value" id="stats-time">00:00:00</span>
+                </div>
+                <div class="stat-row">
+                    <span>Flowers:</span>
+                    <span class="stat-value" id="stats-flowers">0</span>
+                </div>
+                <div class="stat-row">
+                    <span>Sessions:</span>
+                    <span class="stat-value" id="stats-sessions">0</span>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="stats-chart"></canvas>
+            </div>
+            <button id="reset-stats-btn">Reset Stats</button>
+        </div>
+    </div>
+
+    <div id="info-message" class="info-message"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
