@@ -9,6 +9,8 @@ Interactive 3D garden simulator using Three.js. Users can plant flowers, track t
 
 <img width="1875" height="774" alt="garden" src="https://github.com/user-attachments/assets/611a8c29-5965-4345-beac-b732230189a4" />
 
+<img width="1868" height="774" alt="Ekran görüntüsü 2025-08-26 190429" src="https://github.com/user-attachments/assets/cd3d99fe-2ef0-4904-8bed-e6b5abecc575" />
+
 ---
 ## Features
 
