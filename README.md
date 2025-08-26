@@ -23,7 +23,7 @@ Interactive 3D garden simulator using Three.js. Users can plant flowers, track t
 ## How to Run
 
 # Clone the repository
-git clone https://github.com/username/repo-name.git
+git clone [https://github.com/username/repo-name.git](https://github.com/iremince/garden-project/tree/main)
 cd repo-name
 
 # Open index.html in a live server (VS Code recommended)
