@@ -15,7 +15,7 @@ Interactive 3D garden simulator using Three.js. Users can plant flowers, track t
 ## Features
 
 - Users can plant and customize flowers  
-- Track statistics on a daily, weekly, monthly, and yearly basis  
+- Track statistics on a daily, weekly, monthly basis  
 - Minimalist and colorful user interface  
 - 3D interactive garden view  
 - Detailed information available for each planted flower  
